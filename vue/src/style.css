@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #1b2b4b;
+}
+
+/* ===== Layout ===== */
+.page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* ===== Mode Buttons ===== */
+.mode-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.mode-buttons button {
+  border: 1px solid #cfd8e3;
+  background: white;
+  color: #1b2b4b;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mode-buttons button.active {
+  background: #1b2b4b;
+  color: white;
+  border-color: #1b2b4b;
+}
+
+/* ===== Upload Box ===== */
+.upload-box {
+  width: min(900px, 90vw);
+  height: 320px;
+  background: #f2f4f7;
+  border: 2px dashed transparent;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.upload-box:hover {
+  background: #eceff4;
+}
+
+.upload-box.dragging {
+  border-color: #355b8c;
+  background: #e9eef6;
+}
+
+.upload-content {
+  text-align: center;
+  color: #355b8c;
+}
+
+.upload-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.upload-text {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  color: #1b2b4b;
+}
+
+/* ===== Media ===== */
+.media-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.media-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ===== Text Upload ===== */
+.text-upload-box {
+  width: min(900px, 90vw);
+  min-height: 180px;
+  max-height: 320px;
+  background: #f2f4f7;
+  border: 2px dashed transparent;
+  border-radius: 20px;
+  padding: 24px 28px;
+  transition: 0.2s ease;
+  overflow-y: auto;
+  cursor: text;
+}
+
+.text-upload-box.dragging {
+  border-color: #355b8c;
+  background: #e9eef6;
+}
+
+.text-editor-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 120px;
+}
+
+.text-placeholder-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.text-placeholder {
+  color: #9ca3af;
+  font-size: 24px;
+}
+
+.inline-upload-btn {
+  border: none;
+  background: #e5e7eb;
+  color: #222;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.text-editable {
+  width: 100%;
+  min-height: 120px;
+  outline: none;
+  font-size: 16px;
+  color: #1b2b4b;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: transparent;
+  cursor: text;
+  text-align: left;
+}
+
+/* ===== Analyze Section ===== */
+.analyze-section {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.analyze-button-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== Buttons ===== */
+.analyze-btn,
+.reset-btn {
+  min-width: 120px;
+  height: 48px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 999px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.analyze-btn {
+  background: #1b2b4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-btn {
+  background: #6b7280;
+}
+
+/* ===== Result ===== */
+.result-text {
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1b2b4b;
+}
+
+/* ===== Spinner ===== */
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.spinner.dark {
+  width: 42px;
+  height: 42px;
+  border: 4px solid rgba(27, 43, 75, 0.2);
+  border-top: 4px solid #1b2b4b;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
