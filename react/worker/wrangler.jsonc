@@ -1,0 +1,20 @@
+{
+	"name": "i-see-you-api",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-03-25",
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "iSeeYouDB",
+			"database_id": "0ee47334-85d0-4ba7-91e1-95ddc72ec902",
+			"remote": true
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "FILES",
+			"bucket_name": "i-see-you-bucket",
+			"remote": true
+		}
+	]
+}
