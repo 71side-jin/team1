@@ -13,3 +13,5 @@ pw : tlazoq12!(심캡12!)
 백엔드를 켜놓고 새 프롬프트를 열어서 react\front로 이동해주세요
 npm install
 npm run dev
+
+vue폴더는 무시해주세요.
