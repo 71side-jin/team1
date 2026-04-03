@@ -12,7 +12,7 @@
   --color-text: #1b2b4b;
   --color-text-sub: #6b7684;
   --color-text-muted: #9ca3af;
-  --color-primary: #355b8c;
+  --color-primary: #00a2ff;
   --color-btn: #1b2b4b;
   --color-white: #ffffff;
 
@@ -271,12 +271,12 @@ button {
 .upload-box.dragging,
 .text-upload-box.dragging {
   background: var(--color-surface-active);
-  border-color: var(--color-primary);
+  border-color: var(--color-text-sub);
 }
 
 .upload-content {
   text-align: center;
-  color: var(--color-primary);
+  color: var(--color-text-sub);
 }
 
 .simple-upload-content {
